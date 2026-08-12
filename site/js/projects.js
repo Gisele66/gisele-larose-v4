@@ -40,9 +40,10 @@ const PORTFOLIO_PROJECTS = [
         alt: 'Admin panel'
       }
     ],
-    claim: '600+ locations. Community-powered. Built from concept to production.',
+    claim:
+      '756 locations. Community-powered. Built from concept to production. Solo founder — product planning, UX, full-stack development, admin moderation, and live deployment on DigitalOcean.',
     pitch:
-      'A public washroom finder designed for travellers, families, truckers, seniors, and people with medical needs. Users can quickly find nearby washrooms while businesses can participate, update information, and engage with the community.',
+      'A public washroom finder designed for travellers, families, truckers, seniors, and people with medical needs. Users can quickly find nearby washrooms while businesses can participate, update information, and engage with the community. Built solo from concept to production — 756 approved locations, interactive map search, contributor tools, and a full admin moderation dashboard.',
     visitorsTitle: 'What visitors see',
     ownerTitle: 'What business owners run',
     visitorsItems: [
@@ -60,7 +61,16 @@ const PORTFOLIO_PROJECTS = [
       'Owner participation features'
     ],
     links: [{ text: 'Visit site', url: 'https://bathroombusters.app', primary: true }],
-    tags: ['Live Product', 'PWA', 'Admin dashboard']
+    tags: [
+      'Node.js',
+      'SQLite',
+      'Docker',
+      'PWA',
+      'REST APIs',
+      'Admin dashboard',
+      'DigitalOcean',
+      'Caddy'
+    ]
   },
   {
     id: 'alderleaf',
@@ -68,16 +78,26 @@ const PORTFOLIO_PROJECTS = [
     label: 'demo',
     labelText: 'Demo · redesign',
     image: 'assets/images/projects/alderleaf.png',
-    claim: 'Land and tree services for Haida Gwaii — rebuilt in plain HTML.',
+    claim:
+      'Land and tree services for Haida Gwaii — rebuilt in plain HTML. Multi-page redesign with Tailwind, custom CSS, and light JavaScript — no React, Astro, or build step. Maintainable static site ready to host.',
     pitch:
-      'Concept redesign for Alderleaf Land and Tree Services — family-owned arborist business on Haida Gwaii. Built as a maintainable multi-page site with plain HTML, Tailwind CSS (CDN), custom CSS, and light vanilla JavaScript — no React, Astro, or build step.',
+      'Concept redesign for Alderleaf Land and Tree Services — family-owned arborist business on Haida Gwaii. Built as a maintainable multi-page site (home, services, gallery, about, quote, contact, reviews) with plain HTML, Tailwind CSS (CDN), custom CSS, and light vanilla JavaScript for gallery lightbox, service modals, and testimonials — no React, Astro, or build step.',
     visitors: 'Home, services, gallery, about, quote, and contact — clear CTAs and mobile-friendly browsing.',
     owner: 'Simple static pages that are easy to edit and host — no framework overhead.',
     links: [
       { text: 'View demo', url: 'https://gisele66.github.io/Alderleaf-v3/', primary: true },
       { text: 'Alderleaf.ca', url: 'https://alderleaf.ca/' }
     ],
-    tags: ['HTML/CSS', 'Tailwind', 'JavaScript']
+    tags: [
+      'HTML/CSS',
+      'Tailwind',
+      'JavaScript',
+      'Responsive',
+      'Multi-page',
+      'GitHub Pages',
+      'Custom CSS',
+      'No build step'
+    ]
   },
   {
     id: 'community-census',

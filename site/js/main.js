@@ -97,10 +97,7 @@ function renderGallery(project) {
 }
 
 function renderProjectCard(project) {
-  const tags = (project.tags ?? [])
-    .slice(0, 3)
-    .map((tag) => `<span class="tag">${tag}</span>`)
-    .join('');
+  const tags = (project.tags ?? []).map((tag) => `<span class="tag">${tag}</span>`).join('');
   const featured = project.featured ? ' project-card--featured' : '';
 
   const lockHero = project.lockHero ? ' data-lock-hero' : '';

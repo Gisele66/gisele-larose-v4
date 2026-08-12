@@ -42,3 +42,6 @@ powershell -ExecutionPolicy Bypass -File .\start-local.ps1
 
 - Replaced Bathroom Busters mobile gallery with `BB-*.jpg` screenshots (`BB-Main` lead). Laptop mockup unchanged.
 - **Re-locked:** Bathroom Busters featured card — no edits until unlock or an explicit change request.
+- Home #2 → Alderleaf.ca (v3 stack). Screenshot content locked (nav/hero/CTAs + photo framing); card chrome around it stays open for polish.
+- Expanded Bathroom Busters + Alderleaf employer-facing claim/tags. Unified project-card padding to 1.6rem; subtle Alderleaf media border.
+- **Locked both:** Bathroom Busters featured card and Alderleaf.ca card (full sections).

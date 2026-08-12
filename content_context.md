@@ -31,8 +31,8 @@ Same as personal-site.md. Wedding Planner appears on Work only.
 
 | # | Project | Label | Pitch | Link |
 |---|---------|-------|-------|------|
-| 1 | Bathroom Busters | Live product | Public washroom finder + admin moderation — 600+ locations, solo founder | https://bathroombusters.app |
-| 2 | Alderleaf.ca | Demo · redesign | Land and tree services — Haida Gwaii; plain HTML + Tailwind CDN + custom CSS + light JS (Alderleaf v3) | https://gisele66.github.io/Alderleaf-v3/ |
+| 1 | Bathroom Busters | Live product | Public washroom finder + admin moderation — 756 locations, solo founder | https://bathroombusters.app |
+| 2 | Alderleaf.ca | Demo · redesign | Land and tree services — Haida Gwaii; multi-page plain HTML + Tailwind CDN + custom CSS + light JS (Alderleaf v3) | https://gisele66.github.io/Alderleaf-v3/ |
 | 3 | Community Census | Demo · systems build | Privacy-first Indigenous census — six-step workflow, band-customizable branding | https://launch.sw7ft.com/community-census/ |
 | 4 | Journal | Live product | Work calendar + client demo hub integrated with Jarvis | https://launch.sw7ft.com/journal/ |
 | 5 | Dunrite Dave | Demo · redesign | Moving company — before/after, two demo builds | https://launch.sw7ft.com/dunritedave/ |

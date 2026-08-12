@@ -14,7 +14,8 @@ Say **unlock [section]** to set a row back to `open`.
 
 | Section | Page / file | Status | Locked date | Notes |
 |---------|-------------|--------|-------------|-------|
-| Bathroom Busters featured card | Home — `site/index.html` project stack; `site/js/main.js` featured render; `site/js/motion.js` gallery swipe; `site/js/projects.js` bathroom-busters entry (incl. `BB-*.jpg` mobile gallery); CSS `.project-card--featured`, `.project-cycle-frame`, `.project-cycle`, `.project-card-aside`, `.gallery-row` / `.gallery-shot` as used by this card | **locked** | 2026-08-12 | Laptop mockup + swipe-left mobile slideshow + thumbnails (`BB-Main` lead, then Home/Map/Leaderboard/Submit/Rate/Admin). Do not change layout, motion, or assets unless unlocked. |
+| Bathroom Busters featured card | Home — `site/js/projects.js` bathroom-busters entry; `site/js/main.js` featured render; `site/js/motion.js` gallery swipe; CSS `.project-card--featured`, `.project-cycle-frame`, `.project-cycle`, `.project-card-aside`, `.gallery-row` / `.gallery-shot`; assets under `bathroom-busters/` incl. `BB-*.jpg` | **locked** | 2026-08-12 | Laptop mockup + swipe-left mobile slideshow + thumbnails (`BB-Main` lead). Copy: 756 locations claim + stack pills (Node.js, SQLite, Docker, PWA, REST APIs, Admin dashboard, DigitalOcean, Caddy). Do not change layout, motion, assets, or copy unless unlocked. |
+| Alderleaf.ca card | Home — `#alderleaf` in `site/js/projects.js`; media `site/assets/images/projects/alderleaf.png`; CSS `#alderleaf` / `#alderleaf .project-card-media` | **locked** | 2026-08-12 | Screenshot content (nav/hero/CTAs + photo framing) + left-column claim/tags + subtle media border + card padding shared with other cards. Do not change unless unlocked. |
 
 ---
 
