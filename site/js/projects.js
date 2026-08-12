@@ -104,6 +104,7 @@ const PORTFOLIO_PROJECTS = [
     name: 'Community Census',
     label: 'demo-systems',
     labelText: 'Demo · systems build',
+    home: false,
     image: 'assets/images/projects/community-census.png',
     claim: 'Six-step census. Privacy-first. Band-customizable.',
     pitch:
@@ -119,6 +120,7 @@ const PORTFOLIO_PROJECTS = [
     name: 'Journal',
     label: 'live',
     labelText: 'Live product',
+    home: false,
     image: 'assets/images/projects/journal.png',
     claim: 'Calendar, tasks, and demo hub. One operational workspace.',
     pitch:
@@ -133,6 +135,7 @@ const PORTFOLIO_PROJECTS = [
     name: 'Dunrite Dave',
     label: 'demo',
     labelText: 'Demo · redesign',
+    home: false,
     image: 'assets/images/projects/dunrite-dave.png',
     claim: 'Two demo builds. Before/after. Static + PHP.',
     pitch:

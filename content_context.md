@@ -6,9 +6,9 @@
 
 ## Positioning
 
-**Title:** Web Developer & AI Solutions Builder  
+**Title:** Web Developer & Full-Stack Builder  
 **Canonical site:** https://giselelarose.com  
-**Headline:** I build the front door and the back office — websites plus the tools owners use every day.
+**Headline:** Full-stack web development you can ship — websites and software end to end; business tools as an add-on when needed.
 
 **Brand on this build:** GL Solutions lockup (new gold logo). Person: Gisele LaRose.
 
@@ -25,19 +25,32 @@
 
 ---
 
+## Site pages (nav)
+
+Each nav item is its own HTML page. Polish **one page at a time**.
+
+| Nav | File | Role |
+|-----|------|------|
+| Home | `site/index.html` | Positioning, What I do, Bathroom Busters + Alderleaf highlights |
+| Work | `site/work.html` | Full project list (`data-projects="all"`) |
+| About | `site/about.html` | Story / background (scaffold — polish next) |
+| Contact | `site/contact.html` | Email and links (scaffold — polish next) |
+| Resume | `site/resume.html` | Resume PDF + at-a-glance (scaffold — polish next) |
+
+Shared chrome: `site/js/main.js` (`NAV_LINKS`, header/footer).
+
+---
+
 ## Featured projects (home order)
 
-Same as personal-site.md. Wedding Planner appears on Work only.
+Home highlights only for now. Other projects stay on Work / future pages.
 
 | # | Project | Label | Pitch | Link |
 |---|---------|-------|-------|------|
 | 1 | Bathroom Busters | Live product | Public washroom finder + admin moderation — 756 locations, solo founder | https://bathroombusters.app |
 | 2 | Alderleaf.ca | Demo · redesign | Land and tree services — Haida Gwaii; multi-page plain HTML + Tailwind CDN + custom CSS + light JS (Alderleaf v3) | https://gisele66.github.io/Alderleaf-v3/ |
-| 3 | Community Census | Demo · systems build | Privacy-first Indigenous census — six-step workflow, band-customizable branding | https://launch.sw7ft.com/community-census/ |
-| 4 | Journal | Live product | Work calendar + client demo hub integrated with Jarvis | https://launch.sw7ft.com/journal/ |
-| 5 | Dunrite Dave | Demo · redesign | Moving company — before/after, two demo builds | https://launch.sw7ft.com/dunritedave/ |
 
-**Work page extra:** Wedding Planner — Demo · systems build — https://launch.sw7ft.com/wedding-planner/ · Skidegate Slice — Demo · systems build — https://launch.sw7ft.com/skidegate-slice/
+**Work page / later sections:** Community Census, Journal, Dunrite Dave, Wedding Planner, Skidegate Slice.
 
 **Disclaimer:** Concept projects and demos were created independently to demonstrate design and development skills. They were not commissioned by, affiliated with, or endorsed by the businesses shown unless noted.
 
@@ -45,6 +58,6 @@ Same as personal-site.md. Wedding Planner appears on Work only.
 
 ## Copy (from planning docs)
 
-**Differentiation:** I build more than websites. I create business systems that help owners manage appointments, customers, documents, tasks, inventory, reporting, and day-to-day operations from a single platform. The website is the front door; the real value is often the system behind it that saves time and cuts administrative work.
+**Differentiation:** Full-stack web development first — front end, application logic, data, APIs, and deployment, proven on live work (Bathroom Busters) and polished multi-page sites (Alderleaf). Business owner tools (admin, moderation, simple workflows) are an add-on when a project needs them, not the primary pitch. Jarvis-era beginner demos belong in a separate business-solutions section later.
 
-**Intro:** Designed and developed websites, business systems, and workflow solutions across moving services, food service, Indigenous community governance, healthcare, and small business.
+**Intro:** Designed and developed websites and full-stack software — from responsive multi-page sites to production Node.js apps with databases, PWAs, and real hosting.

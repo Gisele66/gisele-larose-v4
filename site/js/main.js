@@ -4,8 +4,8 @@
 
 const SITE = {
   name: 'Gisele LaRose',
-  title: 'Web Developer & AI Solutions Builder',
-  headline: 'I build the front door and the back office — websites plus the tools owners use every day.',
+  title: 'Web Developer & Full-Stack Builder',
+  headline: 'Full-stack web development you can ship — websites and software end to end; business tools as an add-on when needed.',
   email: 'hello@giselelarose.com',
   github: 'https://github.com/Gisele66',
   linkedin: '',
@@ -36,7 +36,7 @@ function renderHeader() {
     <header class="site-header">
       <div class="container header-inner">
         <a href="index.html" class="logo" aria-label="${SITE.name} home">
-          <img src="assets/brand/GL-Logo-Gold-Green-Lux-monogram3.png" alt="GL Solutions — Website & AI Solutions Specialist">
+          <img src="assets/brand/GL-Logo-Gold-Green-Lux-monogram3.png" alt="GL Solutions — Gisele LaRose">
         </a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
           <span class="sr-only">Menu</span>
@@ -176,7 +176,7 @@ function renderModal(project) {
 
   return `
     <div class="modal-overlay" id="project-modal" role="dialog" aria-modal="true" aria-label="${project.name} details">
-      <div class="modal-box">
+      <div class="modal-box" data-modal-project="${project.id}">
         <button class="modal-close" aria-label="Close">×</button>
         <div class="modal-media">
           <img src="${project.image}" alt="${project.name} screenshot">

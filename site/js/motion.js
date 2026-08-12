@@ -1,22 +1,26 @@
 /**
- * Motion layer — Lenis, GSAP, logo tilt, magnetic buttons, gallery cycle, progress.
+ * Motion layer — Lenis + GSAP (single ticker), logo tilt, magnetic buttons, gallery cycle.
  */
 (function () {
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const coarse = window.matchMedia('(hover: none), (pointer: coarse)').matches;
 
-  function initProgress() {
+  function initProgressBar() {
+    if (document.querySelector('.progress-bar')) return;
     const bar = document.createElement('div');
     bar.className = 'progress-bar';
     bar.setAttribute('aria-hidden', 'true');
     document.body.prepend(bar);
+    return bar;
+  }
 
+  function bindNativeProgress(bar) {
+    if (!bar) return;
     function update() {
       const max = document.documentElement.scrollHeight - window.innerHeight;
       const value = max > 0 ? window.scrollY / max : 0;
       bar.style.width = `${Math.min(1, Math.max(0, value)) * 100}%`;
     }
-
     window.addEventListener('scroll', update, { passive: true });
     update();
   }
@@ -58,8 +62,6 @@
       const shots = [...row.querySelectorAll('.gallery-shot')];
       if (shots.length < 2) return;
       const card = row.closest('.project-card');
-      const cycle = card?.querySelector('[data-cycle-image]');
-      const hero = card?.querySelector('[data-hero-image]');
       let index = 0;
       setInterval(() => {
         if (row.matches(':hover')) return;
@@ -68,6 +70,7 @@
         shots[index].classList.add('is-active');
         const next = shots[index].dataset.gallerySrc;
         const liveCycle = card?.querySelector('[data-cycle-image]');
+        const hero = card?.querySelector('[data-hero-image]');
         if (liveCycle && typeof swipeProjectCycle === 'function') {
           swipeProjectCycle(liveCycle, next);
         } else if (liveCycle) {
@@ -79,19 +82,29 @@
     });
   }
 
-  function initLenisGsap() {
-    if (reduce || typeof Lenis === 'undefined' || typeof gsap === 'undefined') return;
-
-    const lenis = new Lenis({ lerp: 0.1 });
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
+  function initLenisGsap(progressBar) {
+    if (reduce || typeof Lenis === 'undefined' || typeof gsap === 'undefined') {
+      bindNativeProgress(progressBar);
+      return;
     }
-    requestAnimationFrame(raf);
+
+    const lenis = new Lenis({ lerp: 0.08 });
 
     if (typeof ScrollTrigger !== 'undefined') {
       gsap.registerPlugin(ScrollTrigger);
       lenis.on('scroll', ScrollTrigger.update);
+    }
+
+    // One animation clock — Lenis + GSAP must not run separate RAF loops
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+    gsap.ticker.lagSmoothing(0);
+
+    if (progressBar) {
+      lenis.on('scroll', ({ progress }) => {
+        progressBar.style.width = `${Math.min(1, Math.max(0, progress)) * 100}%`;
+      });
     }
 
     gsap.from('.hero-copy > *', {
@@ -99,24 +112,28 @@
       opacity: 0,
       duration: 0.8,
       stagger: 0.08,
-      ease: 'power3.out'
+      ease: 'power3.out',
+      clearProps: 'transform'
     });
     gsap.from('.logo-card', {
       scale: 0.92,
       opacity: 0,
       duration: 1,
-      ease: 'power3.out'
+      ease: 'power3.out',
+      clearProps: 'transform'
     });
 
     gsap.utils.toArray('.project-card, .step, .skill-card, .systems-panel').forEach((el) => {
       gsap.from(el, {
-        y: 36,
-        opacity: 0,
-        duration: 0.7,
+        autoAlpha: 0,
+        y: 20,
+        duration: 0.65,
         ease: 'power2.out',
+        clearProps: 'transform',
         scrollTrigger: {
           trigger: el,
-          start: 'top 88%'
+          start: 'top 90%',
+          once: true
         }
       });
     });
@@ -133,13 +150,13 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    initProgress();
+    const progressBar = initProgressBar();
     initLogoTilt();
     initMagnetic();
     initSystemsToggle();
     window.setTimeout(() => {
       initGalleryCycle();
-      initLenisGsap();
+      initLenisGsap(progressBar);
     }, 400);
   });
 })();

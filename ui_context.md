@@ -25,7 +25,7 @@
 
 Banners sit outside `.container`. Overlay copy goes in `.banner__content` > `.container`.
 
-**Home — systems section:** `assets/images/banners/hg-banner.jpg` (from Survivor `hgBanner2.jpg`). Full original frame (`object-fit: contain`, no crop/zoom), cream scrim for type.
+**Home — systems section:** `assets/images/banners/sleeping-beauty.jpg` (Sleeping Beauty mountain). Scaled to 118% width for taller coverage; raised with `margin-top` (not transform) so scroll stays stable. Cream scrim for type.
 
 ---
 
