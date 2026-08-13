@@ -78,12 +78,15 @@ const PORTFOLIO_PROJECTS = [
     label: 'demo',
     labelText: 'Demo · redesign',
     image: 'assets/images/projects/alderleaf.png',
-    claim:
-      'Land and tree services for Haida Gwaii — rebuilt in plain HTML. Multi-page redesign with Tailwind, custom CSS, and light JavaScript — no React, Astro, or build step. Maintainable static site ready to host.',
+    claim: [
+      'Land and tree services for Haida Gwaii — full multi-page redesign from the existing site, rebuilt page by page for home, services, gallery, about, quote, contact, and reviews.',
+      'Hero and page banners were compositionally framed and sized from mismatched source photos so the hero subject — crew, equipment, and landscape — stays sharp and intentional across breakpoints. Service detail popups, a gallery lightbox, and review modals keep the experience interactive without leaving the page.',
+      'Built with plain HTML, Tailwind CSS, custom CSS, and light JavaScript. A polished, mobile-ready site that’s easy to maintain and host.'
+    ],
     pitch:
-      'Concept redesign for Alderleaf Land and Tree Services — family-owned arborist business on Haida Gwaii. Built as a maintainable multi-page site (home, services, gallery, about, quote, contact, reviews) with plain HTML, Tailwind CSS (CDN), custom CSS, and light vanilla JavaScript for gallery lightbox, service modals, and testimonials — no React, Astro, or build step.',
-    visitors: 'Home, services, gallery, about, quote, and contact — clear CTAs and mobile-friendly browsing.',
-    owner: 'Simple static pages that are easy to edit and host — no framework overhead.',
+      'Concept redesign for Alderleaf Land and Tree Services — family-owned arborist business on Haida Gwaii. Rebuilt as a multi-page site (home, services, gallery, about, quote, contact, reviews) in plain HTML with Tailwind CSS (CDN) and custom CSS. Hero and page banners were compositionally framed and sized from mismatched source photos so the hero subject — crew, equipment, and landscape — stays sharp on desktop and mobile. Interactive pieces include service detail modals (with deep links), a gallery lightbox, and a reviews popup on the homepage and reviews page — all in vanilla JavaScript.',
+    visitors: 'Home, services, gallery, about, quote, and contact — clear CTAs, photo-led browsing, and mobile-friendly popups.',
+    owner: 'Static pages that are easy to edit and host, with reusable modal and lightbox patterns.',
     links: [
       { text: 'View demo', url: 'https://gisele66.github.io/Alderleaf-v3/', primary: true },
       { text: 'Alderleaf.ca', url: 'https://alderleaf.ca/' }
@@ -96,6 +99,7 @@ const PORTFOLIO_PROJECTS = [
       'Multi-page',
       'GitHub Pages',
       'Custom CSS',
+      'Lightbox & modals',
       'No build step'
     ]
   },

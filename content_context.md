@@ -48,7 +48,7 @@ Home highlights only for now. Other projects stay on Work / future pages.
 | # | Project | Label | Pitch | Link |
 |---|---------|-------|-------|------|
 | 1 | Bathroom Busters | Live product | Public washroom finder + admin moderation — 756 locations, solo founder | https://bathroombusters.app |
-| 2 | Alderleaf.ca | Demo · redesign | Land and tree services — Haida Gwaii; multi-page plain HTML + Tailwind CDN + custom CSS + light JS (Alderleaf v3) | https://gisele66.github.io/Alderleaf-v3/ |
+| 2 | Alderleaf.ca | Demo · redesign | Multi-page redesign; banner/photo framing; service modals, gallery lightbox, review popups; Tailwind + custom CSS + JS (Alderleaf v3) | https://gisele66.github.io/Alderleaf-v3/ |
 
 **Work page / later sections:** Community Census, Journal, Dunrite Dave, Wedding Planner, Skidegate Slice.
 

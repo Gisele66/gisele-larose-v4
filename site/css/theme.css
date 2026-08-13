@@ -574,14 +574,16 @@ p:last-child {
   transform: scale(1.04);
 }
 
-/* Alderleaf — keep screenshot framing; match BB card height via padding only (do not cover-zoom media) */
+/* Alderleaf — same card padding as BB; taller media fills height (mild cover, top-anchored) */
 #alderleaf {
-  padding-top: 6.625rem;
-  padding-bottom: 6.625rem;
+  padding: 2.5rem 1.75rem;
+  align-items: stretch;
 }
 
 #alderleaf .project-card-media {
   min-height: 0;
+  height: 100%;
+  align-self: stretch;
   background: transparent;
   padding: 0;
   border: 1px solid rgba(40, 36, 32, 0.28);
@@ -589,11 +591,19 @@ p:last-child {
 
 #alderleaf .project-card-media img {
   width: 100%;
-  height: auto;
-  min-height: 0;
+  height: 100%;
+  min-height: 30.5rem; /* ~BB media height at desktop */
   display: block;
-  object-fit: unset;
-  object-position: center top;
+  object-fit: cover;
+  object-position: center 12%;
+}
+
+#alderleaf:hover .project-card-media img {
+  transform: none;
+}
+
+#alderleaf .tag-list {
+  margin-top: 0.85rem;
 }
 
 /* LOCKED: Bathroom Busters featured card — do not edit unless unlocked in scope_context.md */
@@ -754,6 +764,10 @@ p:last-child {
 }
 
 .project-card-claim {
+  margin-bottom: 0.7rem;
+}
+
+.project-card-claim:last-of-type {
   margin-bottom: 1rem;
 }
 
@@ -957,9 +971,10 @@ p:last-child {
   border-radius: 1rem;
 }
 
-/* Alderleaf modal — taller when needed; image scales with viewport so nav shows and content fits without scroll */
+/* Alderleaf modal — full screenshot height so hero CTA isn’t cropped */
 .modal-box[data-modal-project="alderleaf"] .modal-media img {
-  height: clamp(18rem, 30vh, 24rem);
+  height: auto;
+  aspect-ratio: 1720 / 1088;
   object-fit: cover;
   object-position: center top;
 }
@@ -1038,7 +1053,8 @@ body.modal-open {
   }
 
   .modal-box[data-modal-project="alderleaf"] .modal-media img {
-    height: clamp(14rem, 26vh, 18rem);
+    height: auto;
+    aspect-ratio: 1720 / 1088;
   }
 
   .project-card:nth-child(even) .project-card-copy {

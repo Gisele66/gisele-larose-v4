@@ -96,6 +96,11 @@ function renderGallery(project) {
   return `<div class="gallery-row" data-gallery-for="${project.id}">${shots}</div>`;
 }
 
+function renderClaim(claim) {
+  const parts = Array.isArray(claim) ? claim : [claim];
+  return parts.map((text) => `<p class="project-card-claim">${text}</p>`).join('');
+}
+
 function renderProjectCard(project) {
   const tags = (project.tags ?? []).map((tag) => `<span class="tag">${tag}</span>`).join('');
   const featured = project.featured ? ' project-card--featured' : '';
@@ -104,7 +109,7 @@ function renderProjectCard(project) {
   const copy = `
         <span class="${labelClass(project.label)}">${project.labelText}</span>
         <h3 class="project-card-title">${project.name}</h3>
-        <p class="project-card-claim">${project.claim}</p>
+        ${renderClaim(project.claim)}
         <div class="tag-list">${tags}</div>
         <span class="btn btn-ghost">View details</span>`;
 

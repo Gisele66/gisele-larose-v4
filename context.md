@@ -45,3 +45,8 @@ powershell -ExecutionPolicy Bypass -File .\start-local.ps1
 - Home #2 → Alderleaf.ca (v3 stack). Screenshot content locked (nav/hero/CTAs + photo framing); card chrome around it stays open for polish.
 - Expanded Bathroom Busters + Alderleaf employer-facing claim/tags. Unified project-card padding to 1.6rem; subtle Alderleaf media border.
 - **Locked both:** Bathroom Busters featured card and Alderleaf.ca card (full sections).
+
+### Aug 13, 2026
+
+- Alderleaf modal: image uses natural `aspect-ratio: 1720 / 1088` so full hero (including phone CTA) shows; lower modal copy unchanged.
+- **Locked:** Alderleaf.ca project modal — no edits until unlock or an explicit change request.
